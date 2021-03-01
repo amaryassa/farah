@@ -1,8 +1,38 @@
-<p>collecte-edit works!</p>
+<!-- <p>collecte-edit works!</p> -->
 
-<h1 *ngIf="id" >
-  la page Edit de {{id}}
+<h1 *ngIf="id" class="text-center">
+  Modification de <b class="text-danger">{{collecte.nom}}</b>
 </h1>
-<h1 *ngIf="!id" >
-  la page ajouter
+<h1 *ngIf="!id" class="text-center">
+ Création Nouvelle Collecte
 </h1>
+
+
+<form>
+
+  <div class="form-group">
+    <label for="inputNom">Nom Collecte</label>
+    <input type="text" class="form-control" id="inputNom" placeholder="Ex. DevOps ...">
+  </div>
+  <div class="form-group">
+    <label for="inputNom2">Status</label>
+    <select class="form-control" id="status">
+      <option value="cours">en cours</option>
+      <option value="terminer">terminer</option>
+      </select>
+  </div>
+  <div class="form-group">
+    <label for="inputNom2">Architecte</label>
+    <select class="form-control" id="status">
+      <option value="">aaaa</option>
+      <option value="">aaaa</option>
+      <option value="">aaaa</option>
+      <option value="">aaaa</option>
+      </select>
+  </div>
+
+    <button  *ngIf="id" type="submit" class="btn btn-warning">Modifier</button>
+
+    <button  *ngIf="!id" type="submit" class="btn btn-primary">Ajouter</button>
+
+</form>

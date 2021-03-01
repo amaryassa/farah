@@ -21,23 +21,23 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let collecte of collectes" >
         <td>
-          DevOps
+          {{collecte.nom}}
         </td>
         <td>
-          Farah Mahrez
+          {{collecte.architecte.prenom}}  {{collecte.architecte.nom | uppercase}}
         </td>
         <td>
-          <span class="badge badge-success">En cours</span>
+          <span class="badge badge-success">{{collecte.status}}</span>
         </td>
         <td class="d-flex justify-content-around">
-          <a class="btn btn-primary btn-sm" (click)="onGoDetails(5)">
+          <a class="btn btn-primary btn-sm" (click)="onGoDetails(collecte.id)">
             <i class="fas fa-folder">
             </i>
             Details
           </a>
-          <a class="btn btn-info btn-sm"(click)="onEditCollecte(5)">
+          <a class="btn btn-info btn-sm"(click)="onEditCollecte(collecte.id)">
             <i class="fas fa-pencil-alt">
             </i>
             Edit

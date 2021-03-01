@@ -8,6 +8,7 @@ import { CollectesComponent } from './collectes/collectes.component';
 import { ClientsComponent } from './clients/clients.component';
 import { CollecteEditComponent } from './collectes/collecte-edit/collecte-edit.component';
 import { CollecteDetailComponent } from './collectes/collecte-detail/collecte-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { CollecteDetailComponent } from './collectes/collecte-detail/collecte-de
     CollecteEditComponent,
     CollecteDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

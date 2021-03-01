@@ -1,3 +1,5 @@
+import { CollecteService } from './../services/collecte.service';
+import { Collecte } from './../models/collecte.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
@@ -7,9 +9,19 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./collectes.component.css'],
 })
 export class CollectesComponent implements OnInit {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  collectes: Collecte[] = null;
+  constructor(
+    private collecteService: CollecteService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.collecteService.getCollectes().subscribe((data) => {
+      console.log(data);
+      this.collectes = data;
+    });
+  }
 
   onEditCollecte(id) {
     this.router.navigate([id, 'edit'], { relativeTo: this.route });
