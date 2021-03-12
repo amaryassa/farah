@@ -36,6 +36,7 @@ export class CollecteService {
         email: 'amaryassa@amaryassa.fr',
       },
       dateDebut: new Date(),
+      projets: [],
     },
     {
       id: '2',
@@ -48,6 +49,7 @@ export class CollecteService {
         email: 'amaryassa@amaryassa.fr',
       },
       dateDebut: new Date(),
+      projets: [],
     },
 
     {
@@ -61,6 +63,7 @@ export class CollecteService {
         email: 'farah@farah.fr',
       },
       dateDebut: new Date(),
+      projets: [],
     },
   ];
 

@@ -26,4 +26,6 @@ export class CollecteEditComponent implements OnInit {
       });
     });
   }
+
+  addChamp() {}
 }

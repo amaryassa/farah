@@ -1,18 +1,19 @@
-<h1 class="text-center">Detail Page Collecte</h1>
-<div class="row d-flex justify-content-center">
-  <div class="row-8">
-    <ul class="list-group">
-      <li  class="list-group-item">id : <b>{{collecte.id}}</b></li>
-      <li  class="list-group-item">nom : <b>{{collecte.nom}}</b></li>
-      <li  class="list-group-item">status : <b>{{collecte.status}}</b></li>
-      <li  class="list-group-item">dateDebut : <b>{{collecte.dateDebut}}</b></li>
-    </ul>
-    <h3>architecte en charge de cette collecte</h3>
-    <ul class="list-group">
-      <li  class="list-group-item">id : <b>{{collecte.architecte.id}}</b></li>
-      <li  class="list-group-item">nom : <b>{{collecte.architecte.nom}}</b></li>
-      <li  class="list-group-item">prenom : <b>{{collecte.architecte.prenom}}</b></li>
-      <li  class="list-group-item">email : <b>{{collecte.architecte.email}}</b></li>
-    </ul>
+<h1 class="text-center">Details Collecte {{ collecte.id }}</h1>
+<div class=" row d-flex justify-content-center text-center">
+  <div class="col-md-12">
+    Projet crée par :
+    <b>{{ collecte.nom}} - {{collecte.status}}</b>
+  </div>
+  <div class="col-sm-12">
+    Date création : <b> {{collecte.dateDebut}}</b>
+  </div>
+  <div class="col-sm-12">
+    Architecte en charge  : <b> {{collecte.architecte.nom}} {{collecte.architecte.prenom}} -- {{collecte.architecte.email}}</b>
   </div>
 </div>
+
+
+
+
+<app-application></app-application>
+

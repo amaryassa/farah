@@ -10,6 +10,10 @@ import { CollecteEditComponent } from './collectes/collecte-edit/collecte-edit.c
 import { CollecteDetailComponent } from './collectes/collecte-detail/collecte-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ApplicationComponent } from './application/application.component';
+import { ApplicationDetailComponent } from './application/application-detail/application-detail.component';
+import { ApplicationEditComponent } from './application/application-edit/application-edit.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     ClientsComponent,
     CollecteEditComponent,
     CollecteDetailComponent,
+    ApplicationComponent,
+    ApplicationDetailComponent,
+    ApplicationEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
